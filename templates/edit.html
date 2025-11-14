@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Edit User</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        input { padding: 5px; margin: 5px; }
+        button { padding: 5px 10px; }
+        a { text-decoration: none; color: blue; }
+    </style>
+</head>
+
+<body>
+    <h2>️ Edit User</h2>
+
+    <form action="/update/{{ user.id }}" method="POST">
+        <label>
+            Name:
+            <input type="text" name="username" value="{{ user.username }}" required>
+        </label><br>
+        <label>
+            Email:
+            <input type="email" name="email" value="{{ user.email }}" required>
+        </label><br><br>
+
+        <button type="submit">Update</button>
+        <a href="/">Cancel</a>
+    </form>
+
+</body>
+</html>
